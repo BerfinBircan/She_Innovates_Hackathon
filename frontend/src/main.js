@@ -14,7 +14,7 @@ createApp(App)
   .use(vuetify)
   .use(VueGoogleMaps, {
     load: {
-        key: 'AIzaSyBrfkV741KVu8q50a5YANCjE-14t7vQy0k',
+        key: '',
     },
 }).mount('#app')
 

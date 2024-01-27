@@ -2,17 +2,18 @@
 <template>
  <div class="content">
       <div class="left-panel">
-        <img alt="Study Spot" src="./assets/studyspot.png" class="image">
+        <img alt="Study Spot" src="../assets/studyspot.jpg" class="image">
       </div>
       <div class="right-panel">
         <h1 class="location-name">WPU Collaborative Lounge</h1>
         <p class="address">Third Floor of William Pitt Union: 3959 Fifth Ave, Pittsburgh, PA 15260</p>
         <p class="vibe">Occasional Chaos, Collaboration </p>
-        <p class="occupancy">13/27</p>
+        <p class="occupancy">Occupancy: 13/27</p>
         <p class="indstudy">Invidual Study</p>
         <v-rating
             hover
             half-increments
+            readonly
             :length="5"
             :size="32"
             :model-value="2"
@@ -22,6 +23,7 @@
         <v-rating
             hover
             half-increments
+            readonly
             :length="5"
             :size="32"
             :model-value="5"
@@ -31,6 +33,7 @@
         <v-rating
             hover
             half-increments
+            readonly
             :length="5"
             :size="32"
             :model-value="4"
@@ -40,6 +43,7 @@
         <v-rating
             hover
             half-increments
+            readonly
             :length="5"
             :size="32"
             :model-value="3.5"
