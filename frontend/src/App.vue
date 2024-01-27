@@ -1,4 +1,5 @@
 <template>
+  <h1 class="text-lg text-red-500 ">Heyyyyyy</h1>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="hi tasneem, berfin, and zeana!"/>
 </template>
