@@ -1,7 +1,7 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/union">About</router-link>
   </nav>
   <router-view/>
 </template>
@@ -15,13 +15,16 @@
   color: #2c3e50;
 }
 
+/* Styling for the navigation bar */
+nav {
+  background-color: #323cae;; /* University of Pittsburgh blue */
+  color: #fff;
+  margin:0;
+}
 
 nav a {
   font-weight: bold;
   color: #2c3e50;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

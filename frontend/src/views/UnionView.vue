@@ -2,7 +2,7 @@
 <template>
  <div class="content">
       <div class="left-panel">
-        <img alt="Study Spot" src="../assets/studyspot.jpg" class="image">
+        <img alt="Study Spot" src="https://pittnews.com/wp-content/uploads/2014/09/a8c11ba268f6ed51cd6bc4d3646641aa-900x601.jpg" class="image">
       </div>
       <div class="right-panel">
         <h1 class="location-name">WPU Collaborative Lounge</h1>
