@@ -58,26 +58,24 @@
       <div class="popup">
         <span @click="closePopup" class="closeButton">&times;</span>
         <!-- Popup content goes here -->
-
-
-     <v-carousel>
+        <v-carousel>
       <v-carousel-item>
         <v-card
       class="mx-auto"
       max-width="344"
     >
       <v-img
-        src="https://pittnews.com/wp-content/uploads/2014/09/a8c11ba268f6ed51cd6bc4d3646641aa-900x601.jpg"
+        src="https://www.studentaffairs.pitt.edu/sites/default/files/styles/grid_style/public/grid-img/nordys_place.jpeg?h=7a056916&itok=dyusC7bL"
         height="200px"
         cover
       ></v-img>
   
       <v-card-title>
-        William Pitt Union
+        Commuter Lounge 
       </v-card-title>
   
       <v-card-subtitle>
-        6 Study Spaces
+        Ground Floor
       </v-card-subtitle>
   
       <v-card-actions>
@@ -102,23 +100,128 @@
   
           <v-card-text>
             Study Spaces:
-              -Ground Floor 
-                -Commuter Lounge
-                -Nordy's Place
-              -Main Floor 
-              -Third Floor
-                -Quiet Study
-                -Collaborative Lounge
-              -Ninth Floor
+              Located on the ground floor of the william pitt union, in the back right corner of Nordy's place, is the commuters lounge. This study spot is perfect for those looking for a home away from home while on campus, with whiteboards comfy couches and desks, and even microwaves for those who need it. This is usually a good place to get some quiet study time while also not being bombarded with people.
           </v-card-text>
         </div>
       </v-expand-transition>
     </v-card>
       </v-carousel-item>
+
+
+
+
+
+
+
+
+    <v-carousel-item>
+        <v-card
+      class="mx-auto"
+      max-width="344"
+    >
+      <v-img
+        src="https://pittnews.com/wp-content/uploads/2014/09/a8c11ba268f6ed51cd6bc4d3646641aa-900x601.jpg"
+        height="200px"
+        cover
+      ></v-img>
+  
+      <v-card-title>
+        Collaborative Lounge
+      </v-card-title>
+  
+      <v-card-subtitle>
+        Third Floor
+      </v-card-subtitle>
+  
+      <v-card-actions>
+        <v-btn
+          color="orange-lighten-2"
+          variant="text"
+        >
+          Explore
+        </v-btn>
+  
+        <v-spacer></v-spacer>
+  
+        <v-btn
+          :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+          @click="show = !show"
+        ></v-btn>
+      </v-card-actions>
+  
+      <v-expand-transition>
+        <div v-show="show">
+          <v-divider></v-divider>
+  
+          <v-card-text>
+            Located on the third floor of the William Pitt Union, between the quiet study lounge and the stress free zone lies the collaborative lounge! This is the perfect place for studying in groups with options for larger tables as well as two rolling white boards. It also has a desk along the back wall for people who may enjoy studying alone and not being distracted by the other groups working in this room. 
+          </v-card-text>
+        </div>
+      </v-expand-transition>
+    </v-card>
+
+      </v-carousel-item>
+
+
+
+
+
       
+    <v-carousel-item>
+        <v-card
+      class="mx-auto"
+      max-width="344"
+    >
+      <v-img
+        src="https://pittnews.com/wp-content/uploads/2023/12/N_StudySpots_WPU_NY_2-1200x798.jpg"
+        height="200px"
+        cover
+      ></v-img>
+  
+      <v-card-title>
+        Marble Study Room
+      </v-card-title>
+  
+      <v-card-subtitle>
+        Main Floor
+      </v-card-subtitle>
+  
+      <v-card-actions>
+        <v-btn
+          color="orange-lighten-2"
+          variant="text"
+        >
+          Explore
+        </v-btn>
+  
+        <v-spacer></v-spacer>
+  
+        <v-btn
+          :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+          @click="show = !show"
+        ></v-btn>
+      </v-card-actions>
+  
+      <v-expand-transition>
+        <div v-show="show">
+          <v-divider></v-divider>
+  
+          <v-card-text>
+            Located on the main floor of the William Pitt Union, to the left of the elavators is the spacious marble room with multiple tables for studying. This spot is good for both individual studying and for small groups up to 4 people.
+          </v-card-text>
+        </div>
+      </v-expand-transition>
+    </v-card>
+
+      </v-carousel-item>
+
+
+
+
+
     </v-carousel> 
 
-
+     
 
 
 
@@ -135,7 +238,7 @@
     <div class="list-container">
       <!-- List of items displayed on the page -->
       <ul>
-        <li v-for="(item, index) in filteredItems" :key="item.id" :class="{ 'border-bottom': index < filteredItems.length - 1 }">
+        <li v-for="(item, index) in filteredItems" :key="item.id" :class="{ 'border-bottom': index < filteredItems.length - 1 }" @click="">
           <div class="list-item">
             <div class="left-side">
               <div class="item-name"><a :href="item.route">{{ item.name }}</a></div>
@@ -204,11 +307,10 @@ export default {
 <style>
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    text-align: center;
     color: #333;
-    margin-top: 60px;
-    max-width: 800px;
-    margin: 60px auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
   }
 
   .map {
@@ -216,38 +318,38 @@ export default {
     align-items: flex-start;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 20px;
-    border: 1px solid rgb(209, 209, 209);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
-    margin: 5px;
-
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
+
   .scrollableContainer {
-      overflow: auto;
-      max-height: 200px; 
+    overflow: auto;
+    max-height: 500px;
   }
 
   .map-side {
     flex-basis: 50%;
-    justify-items:center;
   }
 
   .map-image {
-    width: 100%;
-    margin: 5;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    border-radius: 8px;
   }
 
   .map-list {
-    flex-basis: 60%;
+    flex-basis: 50%;
     text-align: left;
   }
 
   .explore-title {
-    color: #2c3e50;
-    margin-bottom: 10px;
+    color: #182854;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
   }
 
   .address, .vibe {
@@ -269,10 +371,6 @@ export default {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  li:hover {
-    background-color: #ccc;
-  }
-
   li {
     background-color: #eaeaea;
     margin: 5px 0;
@@ -282,6 +380,9 @@ export default {
     transition: background-color 0.3s;
   }
 
+  li:hover {
+    background-color: #ccc;
+  }
 
   /* Styling for the popup */
 .popupOverlay {
@@ -332,9 +433,11 @@ input.wide-search-bar {
 }
 
 ul {
-  list-style: none;
-  padding: 0;
-}
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
 
 .list-item {
   display: flex;
@@ -405,6 +508,4 @@ ul {
     font-size: 1.6rem;
     font-style: italic;
   }
-
-
 </style>
